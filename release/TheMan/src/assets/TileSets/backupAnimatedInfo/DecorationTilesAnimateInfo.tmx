@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<AnimateTiles>
+	<AnimateTile currentID = "3" animationTime = "20">   <!--this is actually 29 not 3 look into levelparser for more detail-->
+			<nextID nextTileID = "4"/>
+	</AnimateTile>
+
+	<AnimateTile currentID = "6" animationTime = "20">   <!--actually this TileSet's desired currentID is 32 since 26 + 6 = 32-->
+			<nextID nextTileID = "7"/>          <!--26 is our first grid ID-->
+	</AnimateTile>
+</AnimateTiles>
+
+<!-- each tileset has its own first grid ID-->
+<!-- the next step is just to plus with the ID above then we'll have the exactly ID-->
+<!-- this file contains animation frames info about that corresponding Tile-->
+<!-- this will be used in parsing TileSets-->

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="32" tileheight="32" infinite="0" nextobjectid="12">
+ <layer name="Tile Layer 2" width="20" height="12">
+  <properties>
+   <property name="Collidable" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDFUAAAPAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 0">
+  <object id="2" name="MenuBackground" type="AnimatedGraphic" x="-7" y="-7" width="652" height="396">
+   <properties>
+    <property name="CallBackID" type="int" value="0"/>
+    <property name="FilePath" value="src/assets/MenuState/MenuBackground.png"/>
+    <property name="FrameHeight" type="int" value="360"/>
+    <property name="FrameWidth" type="int" value="640"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+    <property name="textureID" value="MENUBACKGROUND"/>
+   </properties>
+  </object>
+  <object id="11" name="TheMan" type="AnimatedGraphic" x="83" y="5" width="479" height="141">
+   <properties>
+    <property name="CallBackID" type="int" value="0"/>
+    <property name="FilePath" value="src/assets/MenuState/TheMan.png"/>
+    <property name="FrameHeight" type="int" value="100"/>
+    <property name="FrameWidth" type="int" value="300"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+    <property name="textureID" value="THEMAN"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 1" width="20" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDFUAAAPAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="15" name="ExitButton_Menu" type="MenuButton" x="208" y="282" width="219" height="41">
+   <properties>
+    <property name="CallBackID" type="int" value="2"/>
+    <property name="FilePath" value="src/assets/MenuButton/ExitButton.png"/>
+    <property name="FrameHeight" type="int" value="40"/>
+    <property name="FrameWidth" type="int" value="100"/>
+    <property name="textureID" value="EXITBUTTON_MENU"/>
+   </properties>
+  </object>
+  <object id="4" name="PlayButton_Menu" type="MenuButton" x="208" y="178" width="219" height="41">
+   <properties>
+    <property name="CallBackID" type="int" value="1"/>
+    <property name="FilePath" value="src/assets/MenuButton/PlayButton.png"/>
+    <property name="FrameHeight" type="int" value="40"/>
+    <property name="FrameWidth" type="int" value="100"/>
+    <property name="textureID" value="PLAYBUTTON_MENU"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

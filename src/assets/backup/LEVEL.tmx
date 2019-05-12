@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="100" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="83">
+ <tileset firstgid="1" name="ground2" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="TileSets/Game Objects Tiles.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="17" name="ground3" tilewidth="32" tileheight="32" tilecount="110" columns="10">
+  <image source="TileSets/tile_jungle_tree_dark.png" width="320" height="352"/>
+ </tileset>
+ <tileset firstgid="127" name="ground" tilewidth="32" tileheight="32" tilecount="30" columns="3">
+  <image source="TileSets/atlas-props.png" width="109" height="333"/>
+ </tileset>
+ <tileset firstgid="157" name="ground4" tilewidth="32" tileheight="32" tilecount="290" columns="29">
+  <image source="TileSets/magic cliff.png" width="928" height="320"/>
+ </tileset>
+ <tileset firstgid="447" name="ground1" tilewidth="32" tileheight="32" tilecount="25" columns="5">
+  <image source="TileSets/Ground Tiles.png" width="160" height="160"/>
+ </tileset>
+ <objectgroup name="BackGround">
+  <object id="16" name="ScrollingBackground" type="ScrollingBackground" x="0" y="1" width="30" height="30" visible="0">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="0"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround1">
+  <object id="24" name="ScrollingBackground1" type="ScrollingBackground" x="130" y="3" width="26" height="27">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground1.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="1"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround2">
+  <object id="26" name="ScrollingBackground2" type="ScrollingBackground" x="259" y="5" width="30" height="25">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground2.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="2"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround3">
+  <object id="27" name="ScrollingBackground3" type="ScrollingBackground" x="389" y="1" width="27" height="29">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground3.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="1"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround4">
+  <object id="28" name="ScrollingBackground4" type="ScrollingBackground" x="612" y="4" width="28" height="29">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground4.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="2"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround5">
+  <object id="29" name="ScrollingBackground5" type="ScrollingBackground" x="776" y="-4" width="33" height="35">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground5.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="2"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround6">
+  <object id="30" name="ScrollingBackground6" type="ScrollingBackground" x="961" y="3" width="29" height="26">
+   <properties>
+    <property name="FilePath" value="src/assets/MountainBackground/ScrollingBackground6.png"/>
+    <property name="FrameHeight" type="int" value="216"/>
+    <property name="FrameWidth" type="int" value="384"/>
+    <property name="ScrollSpeed" type="int" value="2"/>
+    <property name="textureID" value="SCROLLINGBACKGROUND6"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Object Layer 1">
+  <object id="15" name="Player" type="Player" x="114" y="238" width="53" height="70">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="40"/>
+    <property name="DyingFrameWidth" type="int" value="40"/>
+    <property name="DyingNumFrames" type="int" value="9"/>
+    <property name="DyingTextureID" value="PLAYERDYING"/>
+    <property name="FilePath" value="src/assets/Player/PlayerTest.png"/>
+    <property name="FilePathDying" value="src/assets/Player/PlayerDying.png"/>
+    <property name="FrameHeight" type="int" value="25"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureHeight" type="int" value="25"/>
+    <property name="textureID" value="PLAYERTEST"/>
+    <property name="textureWidth" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="10" name="Turret" type="Turret" x="1804" y="87" width="123" height="121">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="50"/>
+    <property name="DyingFrameWidth" type="int" value="35"/>
+    <property name="DyingNumFrames" type="int" value="7"/>
+    <property name="DyingTextureID" value="TURRETDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Turret/Turret.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Turret/TurretDying.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="35"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="7"/>
+    <property name="textureHeight" type="int" value="50"/>
+    <property name="textureID" value="TURRET"/>
+    <property name="textureWidth" type="int" value="35"/>
+   </properties>
+  </object>
+  <object id="12" name="ShotGlider" type="ShotGlider" x="471" y="32" width="115" height="99">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="51"/>
+    <property name="DyingFrameWidth" type="int" value="49"/>
+    <property name="DyingNumFrames" type="int" value="6"/>
+    <property name="DyingTextureID" value="SHOTGLIDERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/ShotGlider/ShotGlider.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/ShotGlider/ShotGliderDying.png"/>
+    <property name="FrameHeight" type="int" value="45"/>
+    <property name="FrameWidth" type="int" value="45"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureHeight" type="int" value="45"/>
+    <property name="textureID" value="SHOTGLIDER"/>
+    <property name="textureWidth" type="int" value="45"/>
+   </properties>
+  </object>
+  <object id="18" name="Glider" type="Glider" x="1505" y="89" width="139" height="132">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="GLIDERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Glider/Glider.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Glider/GliderDying.png"/>
+    <property name="FrameHeight" type="int" value="92"/>
+    <property name="FrameWidth" type="int" value="89"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="8"/>
+    <property name="textureHeight" type="int" value="92"/>
+    <property name="textureID" value="GLIDER"/>
+    <property name="textureWidth" type="int" value="89"/>
+   </properties>
+  </object>
+  <object id="32" name="BOSS" type="EnemyBoss" x="2978" y="120" width="198" height="227">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="ENEMYBOSSDYING"/>
+    <property name="FilePath" value="src/assets/Boss/EnemyBoss/EnemyBoss.png"/>
+    <property name="FilePathDying" value="src/assets/Boss/EnemyBoss/EnemyBossDying.png"/>
+    <property name="FrameHeight" type="int" value="34"/>
+    <property name="FrameWidth" type="int" value="35"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="20"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="ENEMYBOSS"/>
+    <property name="textureWidth" type="int" value="35"/>
+   </properties>
+  </object>
+  <object id="34" name="Glider1" type="Glider" x="2553" y="294" width="139" height="132">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="43"/>
+    <property name="DyingFrameWidth" type="int" value="36"/>
+    <property name="DyingNumFrames" type="int" value="5"/>
+    <property name="DyingTextureID" value="GLIDER1DYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Glider1/Glider1.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Glider1/Glider1Dying.png"/>
+    <property name="FrameHeight" type="int" value="40"/>
+    <property name="FrameWidth" type="int" value="30"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureHeight" type="int" value="40"/>
+    <property name="textureID" value="GLIDER1"/>
+    <property name="textureWidth" type="int" value="30"/>
+   </properties>
+  </object>
+  <object id="35" name="Turret1" type="Turret" x="1258" y="37" width="123" height="121">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="32"/>
+    <property name="DyingFrameWidth" type="int" value="32"/>
+    <property name="DyingNumFrames" type="int" value="2"/>
+    <property name="DyingTextureID" value="TURRET1DYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Turret1/Turret1.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Turret1/Turret1Dying.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="32"/>
+    <property name="textureID" value="TURRET1"/>
+    <property name="textureWidth" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="54" name="ShotGlider1" type="ShotGlider" x="1005" y="23" width="116" height="98">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SHOTGLIDER1DYING"/>
+    <property name="FilePath" value="src/assets/Enemy/ShotGlider1/ShotGlider1.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/ShotGlider1/ShotGlider1Dying.png"/>
+    <property name="FrameHeight" type="int" value="144"/>
+    <property name="FrameWidth" type="int" value="160"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="144"/>
+    <property name="textureID" value="SHOTGLIDER1"/>
+    <property name="textureWidth" type="int" value="160"/>
+   </properties>
+  </object>
+  <object id="57" name="Eskeletor" type="Eskeletor" x="2200" y="47" width="83" height="69">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="ESKELETORDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Eskeletor/Eskeletor.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Eskeletor/EskeletorDying.png"/>
+    <property name="FrameHeight" type="int" value="118"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="133"/>
+    <property name="textureID" value="ESKELETOR"/>
+    <property name="textureWidth" type="int" value="151"/>
+   </properties>
+  </object>
+  <object id="70" name="Eskeletor1" type="Eskeletor" x="2349" y="267" width="73" height="67">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="ESKELETOR1DYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Eskeletor1/Eskeletor1.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Eskeletor1/Eskeletor1Dying.png"/>
+    <property name="FrameHeight" type="int" value="70"/>
+    <property name="FrameWidth" type="int" value="54"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="70"/>
+    <property name="textureID" value="ESKELETOR1"/>
+    <property name="textureWidth" type="int" value="54"/>
+   </properties>
+  </object>
+  <object id="82" name="Snail" type="Snail" x="625" y="390" width="52" height="46">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="96"/>
+    <property name="DyingFrameWidth" type="int" value="96"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SNAILDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/Snail/Snail.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/Snail/SnailDying.png"/>
+    <property name="FrameHeight" type="int" value="34"/>
+    <property name="FrameWidth" type="int" value="34"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SNAIL"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="CollisionLayer" width="100" height="15">
+  <properties>
+   <property name="Collidable" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt00EKwCAMBVFz/3O5yam6KAERtAaMpjAP/q6L0mlKAQAAwE4qt98ALXrkQo9c6JGLt0eVd4ix2sM6qHBTkb6+bd/Bxo3EGPUYdVDHjdDMz/71frMO7Y3MtvLMn3bCA9w0Up0=
+  </data>
+ </layer>
+</map>

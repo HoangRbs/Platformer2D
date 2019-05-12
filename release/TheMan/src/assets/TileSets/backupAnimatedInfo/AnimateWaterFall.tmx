@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<AnimateTiles>
+	<AnimateTile currentID = "1" animationTime = "20">  
+			<nextID nextTileID = "4"/>
+			<nextID nextTileID = "7"/>
+			<nextID nextTileID = "10"/>
+	</AnimateTile>
+
+	<AnimateTile currentID = "19" animationTime = "20">   
+			<nextID nextTileID = "22"/>  
+			<nextID nextTileID = "25"/>
+			<nextID nextTileID = "28"/>       
+	</AnimateTile>
+
+	<AnimateTile currentID = "38" animationTime = "20">   
+			<nextID nextTileID = "41"/>  
+			<nextID nextTileID = "44"/>
+			<nextID nextTileID = "47"/>       
+	</AnimateTile>
+
+	<AnimateTile currentID = "56" animationTime = "20">   
+			<nextID nextTileID = "59"/>   
+			<nextID nextTileID = "62"/>      
+			<nextID nextTileID = "65"/>
+	</AnimateTile>
+
+	<AnimateTile currentID = "74" animationTime = "20">   
+			<nextID nextTileID = "77"/> 
+			<nextID nextTileID = "80"/>
+			<nextID nextTileID = "83"/>        
+	</AnimateTile>
+</AnimateTiles>

@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="190" height="20" tilewidth="32" tileheight="32" infinite="0" nextobjectid="261">
+ <tileset firstgid="1" name="AnimateWaterFall" tilewidth="32" tileheight="32" tilecount="216" columns="18">
+  <properties>
+   <property name="AnimateInfoFilePath" value="src/assets/TileSets/AnimateWaterFallInfo.tmx"/>
+  </properties>
+  <image source="TileSets/AnimateWaterFall.png" width="576" height="386"/>
+ </tileset>
+ <tileset firstgid="217" name="Forest_32x" tilewidth="32" tileheight="32" tilecount="440" columns="20">
+  <image source="TileSets/Forest_32x.png" width="640" height="720"/>
+ </tileset>
+ <tileset firstgid="657" name="dungeon" tilewidth="32" tileheight="32" tilecount="36" columns="6">
+  <image source="TileSets/dungeon.png" width="192" height="192"/>
+ </tileset>
+ <tileset firstgid="693" name="Game Objects Tiles" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="TileSets/Game Objects Tiles.png" width="128" height="128"/>
+ </tileset>
+ <objectgroup name="BackGround1">
+  <object id="16" name="YaranaicaBackground1" type="ScrollingBackground" x="-1" y="2" width="30" height="30">
+   <properties>
+    <property name="FilePath" value="src/assets/YaranaicaBackground/Yaranaica1.png"/>
+    <property name="FrameHeight" type="int" value="360"/>
+    <property name="FrameWidth" type="int" value="640"/>
+    <property name="ScrollSpeed" type="float" value="1"/>
+    <property name="textureID" value="YARANAICABACKGROUND1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround2">
+  <object id="188" name="YaranaicaBackground2" type="ScrollingBackground" x="127" y="2" width="30" height="30">
+   <properties>
+    <property name="FilePath" value="src/assets/YaranaicaBackground/Yaranaica2.png"/>
+    <property name="FrameHeight" type="int" value="360"/>
+    <property name="FrameWidth" type="int" value="640"/>
+    <property name="ScrollSpeed" type="float" value="1.09"/>
+    <property name="textureID" value="YARANAICABACKGROUND2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround3">
+  <object id="26" name="YaranaicaBackground3" type="ScrollingBackground" x="259" y="5" width="30" height="25">
+   <properties>
+    <property name="FilePath" value="src/assets/YaranaicaBackground/Yaranaica3.png"/>
+    <property name="FrameHeight" type="int" value="360"/>
+    <property name="FrameWidth" type="int" value="640"/>
+    <property name="ScrollSpeed" type="float" value="1.2"/>
+    <property name="textureID" value="YARANAICABACKGROUND3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="BackGround4">
+  <object id="27" name="YaranaicaBackground4" type="ScrollingBackground" x="389" y="1" width="27" height="29">
+   <properties>
+    <property name="FilePath" value="src/assets/YaranaicaBackground/Yaranaica4.png"/>
+    <property name="FrameHeight" type="int" value="360"/>
+    <property name="FrameWidth" type="int" value="640"/>
+    <property name="ScrollSpeed" type="float" value="1.1"/>
+    <property name="textureID" value="YARANAICABACKGROUND4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="animatedwaterfall" width="190" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt1jENACAQBMEPGtCABvwrQwW54mYUbLkzAAA0WekACNjpAAg46QAIuOkACPD3NPL3NPL3NPL3AAAAAAAAwG8Pe08A6Q==
+  </data>
+ </layer>
+ <layer name="Tile Layer0" width="190" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztm01y0zAYhuMcoHAG6Ao2hgXlAG6nsGvIIjCQHbTsypK2DHAA/gY4AAEGOEBT0pJeoDMtPQE7YN3ChrLg9cQiGo1k68eKrFjPzDvNJHasT3otfZG/Nhr+stu0871x1GhckBCN6H1feIh2P4Iee9r+gDkJxn4+03WO0vcXGH90qHPYz3zgJdr8Cnqt2fZtS3NQHbE1nxdBPHxD4IGE8jY93h2O7zc98cMHtPkj9EkQc785imW/4L4o+twHitZs0fqfTEHsvxWOvUfF2/Fovj/HtPOrJ+32iW6N+7QVjSR77JKHfXXLwzZPgq7EOhBneYJPsB5t57R/KfN/O/N2qmvU67xzA+4pyllT717NRJPn+7iiY+7qN4Yp5xX68zaOvQMtQyvQ3YqOhQvmc/bweMfKEkt8H4HMiymsHwee+lOXYRZvOxrnRvRfFe7j+DVoHdqAHgTf/6dD7eOJ9jkIPN/XzZe2GZbYn08wXk+hZ9Bz6IWk71drfH/0Hfh5MRrLBexa4+J3qK7veTnqG7S/B72F3kHva+znsrkZ+rJUaN+b5uebOL4PbUGfoUHNxuo74v0B/bQQt03fk/m36JlhmbmBa+hYysrP9wzGyNY+9STW0j+4xgn0l7pWVfdZ8hDVmkyr73Xzc5Zviufx+lnlWUVVmEFfnoJOU31KalVUEf2OJTUsrFQg+zqiuUBUa2Lb97Jznk7MLHQsZeTnRzjnGPqlcK5pTY8stuf8M+jLs9Asp+ZEBdfPnkS1JlWZ7xODe55Ax+IqPy+q6fGFS+jLOehyc7yvfjHSq7e5Eo3kgh1c9ws0zK5P1p6q+l7H+7xYTPJzHVpMP/sOOyZl1JlNcv/+IBrVWB1WdDx4vi9jjVTNz01h+7mXjXEV64t09tunob7SBvQ+fvrcVKbmWOR5U98X5efhuaE6Or5n/2cpEAgEAm75B1M5kt8=
+  </data>
+ </layer>
+ <layer name="CollisionLayer" width="190" height="20">
+  <properties>
+   <property name="Collidable" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztW+1x2zAMleQ0G0RuPE7uvGNWi9s/HaBuR6hwNS4oAoAgCUhK0neHH5ElkiAfiA8yw5CDyyLfGuR70ngi4NXpl/O9rHm43MYgyZ7n973jZ/D310V+O57tBeO49QiGYV7GcL/I4SZfFvm6g3F9ZPSu+zS+chr4fVr+viNtwrMDe1aLXtu0sAfeA5D7Xs7/6Bj3S/unuwJwq9VH9/ARALx/HP/65dP4luOwnsebeMfE/X3PGK+DHTdQ3rfaV5RdTo37A/D4aXwVqjOI5Guvxm+tyNyfJPTsWdq3ki1JvJkIr1F6bYn7/cexfX0mwRYpqP6t8xjlMyzec05ZHJvI3Gm6Twnx1Nq+s5f3Eqe9bT4I70XoH8X9Gt7PxCd5gO9Gccfi/Tz+u4dbfVLenw3eR+cQ7433iBfluQSoQ2j1hij9Je6X/DcH5QBff/BpFs+OrH/MOY9JeWcpzplvYyj17dnvMzi6Je9Lsb53X7d0KOVFkfrT/ECSUq5gxV+eeBr7P3Ty3Zoz/M0zHu5fn5S9/LPxvrZvD++pLXlqyhgv8Np4zT6dAa7rxGzH0i1iTfFMAeeB99kbe2CuevrP+6pvKb/vCm16amF8byrVdnrPaaS9j4LrUTNX0T5M4ndvH1psthbvpVwvExrvPWeWdE4elHbmMZafFry1sBLHAbweChygvsaTw0TVez3g42mtC24V56wNja8etMT3meD+pyUmQn9/GN9KyY95xpUBnmNbOTfAOrf6LLyn2Ir3/KxEOm/y5AnUhlvPcfi6axygZ80lZPtwrmur7pK9r8X75ym+TS8mJXauredAO9p9KeAK11HiGo9hPdyheQO2qY1DEzoGzCc03nNOSLGhFddpsUhtjDIH8N7j42h/0THrlryvtWNqJ7y2oO2Z0hmS9D60dyFt194LscZQEl5zxJyP36Hwcks7r9D2h5a9mvs6fl5RY+8l3mcAeJ/BfU+8GxXnlDgn1cKj57qV91bf3OfUxi/cdmdlDFY9EnJyiM+t3JzrjudlvFZjyfmD8N6zB3j8NhVtfaJ4X+vv6fsap0qSfYeX68THGWXzyFt6j0Y7x7PsATnTA4+vzuA99Mt1vifzEnUnDAB+xZpP6T4TrR3T3608wWO3tXs+9Jt9z1bykZT70b7O055nnrRczQvrf2QyRMs9kGuUgxF1B9oGtTXP/XAeMyMfzo51kfZqek+g5lu+RqVcn97jRdF8paY/6lobl0uCZ67eO5PamZUlLfcxW33wGj679f8GS/m9ds7IYZ3TWlKyp9pvpX0hG15dvdLCy6y2s3QsjesPFEGbkg==
+  </data>
+ </layer>
+ <layer name="Tile Layer 1" width="190" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztms8ygzEQwNtO38EzGH0IHsbBU+CAByiH1g0zOKgpbjjgXhww3qN1thkyYmfzf5OmbX4zO+Vrv3ybzSbZ7H6NRhomEVICMfr79oHbDvj+ieZ6hZdx5P14bPB4dZq8Y7gD7e2C7DWZGqzMHUct8/cdJt+ZoE/qO5MOUgQ9Qme1jR78rg9yqOjetfSz8p9U+8hK5rVIrNmiL1/omir4Gv49xcDDn6Qtjw332OztEkNcgG0HIJeONqZiiFD9uO/jAu/ZLnFYCp2nbQcORB/U+aHrU2yc5KOP4AH8/RHkacHiHCqerMQRGn/n8nmJ0PEN/P0d5OPX7zeY/d/HFrnPniHn6JsFiwGXA/zBx57TzDfE5GJM/+ueUXIuq/IDFdfL6y4xvQumMd+E+bYFsp0pDjH5I6dvnkSsm58N+xzj4Kr1IxUeKL/Snd27cH0f5AB9j9tQczg+5+cU5Fq7674xXVY1PuuzJ+jG6xTaPgM5t6z3uhwDV26Vg2HLbQ2tNYWy0PkxFQdxcQtjfwdyH5hz4Vz/qHU1xRmGqinoWPewSd0LykfmDZ5hXF9AXpWcSyhi3JcCJafP+NYUKLjylDW+/2Mtw/7rEruGxLWhfu+jdwyjZjk1BeHzi7xHqPVZqo7rii4Gd7VtmyHOSe33puerc3SoifOpmgLVj9TMu8+H5OVtjNGnCy42bjfD1vgSMemfsm+4XZynngfb2rCdRX1qcyXlTWaJWfIvzlpt7nfOqOfiOa/OfQw1TzhrWDbEc2QuUMYK8j1Rde7JfP4s+JVJx5j6Fuaasa1Yu1L329ZOjrmS+z0Q7vZcpSS4deoXUJ+LsTVVD3cZQ10t3eUeX9S5NiogpsldkzXVLnxqc6F+7+MLpc//WQK/m4P/ps4KqWpZlUoM325ZZXE=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="15" name="Player" type="Player" x="5508" y="477" width="34" height="51">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="PLAYERDYING"/>
+    <property name="FilePath" value="src/assets/Player/Player_Yaranaica.png"/>
+    <property name="FilePathDying" value="src/assets/Player/PlayerDying.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="35"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="10"/>
+    <property name="textureHeight" type="int" value="25"/>
+    <property name="textureID" value="PLAYER"/>
+    <property name="textureWidth" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="83" name="PlaneDisk" type="MovingPlatform" x="3406" y="133" width="90" height="15">
+   <properties>
+    <property name="FilePath" value="src/assets/MovingPlatform/PlaneDisk.png"/>
+    <property name="FrameHeight" type="int" value="14"/>
+    <property name="FrameWidth" type="int" value="44"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+    <property name="textureHeight" type="int" value="14"/>
+    <property name="textureID" value="PLANEDISK"/>
+    <property name="textureWidth" type="int" value="44"/>
+   </properties>
+  </object>
+  <object id="87" name="Water1" type="WaterPlatform" x="1986" y="356" width="382" height="61">
+   <properties>
+    <property name="FrameHeight" type="int" value="0"/>
+    <property name="FrameWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="90" name="Ladder1" type="LadderPlatform" x="1891" y="354" width="27" height="160">
+   <properties>
+    <property name="FrameHeight" type="int" value="0"/>
+    <property name="FrameWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="93" name="Spice1" type="DeadSprite" x="1449" y="288" width="80" height="24">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="95" name="UselessSoldier" type="CantBeHurtEnemy" x="545" y="156" width="32" height="44">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="USELESSSOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="USELESSSOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="98" name="Agent" type="FarAttackEnemy" x="4122" y="105" width="31" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="AGENTDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/Agent.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/AgentDying.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="43"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="AGENT"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="111" name="Spice1" type="DeadSprite" x="707" y="481" width="59" height="31">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="112" name="Spice1" type="DeadSprite" x="832" y="325" width="31" height="58">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="113" name="Spice1" type="DeadSprite" x="708" y="191" width="59" height="32">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="114" name="Spice1" type="DeadSprite" x="831" y="128" width="31" height="64">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="116" name="CheckPoint_1" type="CheckPointObject" x="346" y="379" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="121" name="Spice1" type="DeadSprite" x="1376" y="233" width="62" height="22">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="122" name="Spice1" type="DeadSprite" x="1446" y="419" width="82" height="24">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="125" name="Spice1" type="DeadSprite" x="2691" y="165" width="34" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="126" name="Spice1" type="DeadSprite" x="2590" y="293" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="127" name="Spice1" type="DeadSprite" x="2661" y="427" width="26" height="17">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="128" name="Spice1" type="DeadSprite" x="2556" y="164" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="129" name="Spice1" type="DeadSprite" x="2593" y="101" width="31" height="23">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="130" name="SpiderMan" type="ClosedAttackEnemy" x="2516" y="36" width="34" height="52">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SPIDERMANDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderMan.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderManDying.png"/>
+    <property name="FrameHeight" type="int" value="109"/>
+    <property name="FrameWidth" type="int" value="75"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="3"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SPIDERMAN"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="131" name="PlaneDisk" type="MovingPlatform" x="3012" y="111" width="90" height="15">
+   <properties>
+    <property name="FilePath" value="src/assets/MovingPlatform/PlaneDisk.png"/>
+    <property name="FrameHeight" type="int" value="14"/>
+    <property name="FrameWidth" type="int" value="44"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+    <property name="textureHeight" type="int" value="14"/>
+    <property name="textureID" value="PLANEDISK"/>
+    <property name="textureWidth" type="int" value="44"/>
+   </properties>
+  </object>
+  <object id="142" name="Spice1" type="DeadSprite" x="2849" y="131" width="62" height="27">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="143" name="Spice1" type="DeadSprite" x="3201" y="135" width="62" height="23">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="144" name="Spice1" type="DeadSprite" x="2914" y="163" width="140" height="27">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="145" name="Spice1" type="DeadSprite" x="3057" y="163" width="140" height="27">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="149" name="Sasuke" type="ClosedAttackEnemy" x="2042" y="365" width="39" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="150" name="Naruto" type="ClosedAttackEnemy" x="991" y="74" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="NARUTODYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/Naruto.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/NarutoDying.png"/>
+    <property name="FrameHeight" type="int" value="71"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="NARUTO"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="152" name="Spice1" type="DeadSprite" x="3592" y="226" width="86" height="23">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="153" name="Spice1" type="DeadSprite" x="3684" y="226" width="85" height="23">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="154" name="Ladder1" type="LadderPlatform" x="3522" y="226" width="27" height="285">
+   <properties>
+    <property name="FrameHeight" type="int" value="0"/>
+    <property name="FrameWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="155" name="PinkRanger" type="FarAttackEnemy" x="4120" y="391" width="37" height="50">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="PINKRANGERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRanger.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRangerDying.png"/>
+    <property name="FrameHeight" type="int" value="85"/>
+    <property name="FrameWidth" type="int" value="70"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="PINKRANGER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="156" name="SpiderMan" type="ClosedAttackEnemy" x="4251" y="162" width="38" height="58">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SPIDERMANDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderMan.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderManDying.png"/>
+    <property name="FrameHeight" type="int" value="109"/>
+    <property name="FrameWidth" type="int" value="75"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="3"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SPIDERMAN"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="157" name="SpiderMan" type="ClosedAttackEnemy" x="4548" y="33" width="38" height="58">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SPIDERMANDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderMan.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderManDying.png"/>
+    <property name="FrameHeight" type="int" value="109"/>
+    <property name="FrameWidth" type="int" value="75"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="3"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SPIDERMAN"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="158" name="LastCheckPoint_1" type="CheckPointObject" x="4708" y="498" width="49" height="51">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/LastCheckPoint.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="50"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureID" value="LASTCHECKPOINT"/>
+   </properties>
+  </object>
+  <object id="160" name="Spice1" type="DeadSprite" x="4672" y="134" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="161" name="Spice1" type="DeadSprite" x="4576" y="257" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="162" name="Spice1" type="DeadSprite" x="4672" y="353" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="163" name="Spice1" type="DeadSprite" x="4578" y="491" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="164" name="GainPlayerLife_1" type="GainPlayerLife" x="493" y="475" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="168" name="Sasuke" type="ClosedAttackEnemy" x="4357" y="205" width="46" height="46">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="170" name="Spice1" type="DeadSprite" x="2622" y="550" width="31" height="20">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="171" name="Spice1" type="DeadSprite" x="4735" y="392" width="64" height="23">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="179" name="CheckPoint_1" type="CheckPointObject" x="717" y="122" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="180" name="CheckPoint_1" type="CheckPointObject" x="1285" y="345" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="181" name="CheckPoint_1" type="CheckPointObject" x="2105" y="155" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="182" name="CheckPoint_1" type="CheckPointObject" x="2879" y="378" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="183" name="CheckPoint_1" type="CheckPointObject" x="3653" y="441" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="184" name="CheckPoint_1" type="CheckPointObject" x="4482" y="59" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="185" name="CheckPoint_1" type="CheckPointObject" x="1920" y="315" width="26" height="40">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/CheckPoint_1.png"/>
+    <property name="FrameHeight" type="int" value="44"/>
+    <property name="FrameWidth" type="int" value="29"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureID" value="CHECKPOINT_1"/>
+   </properties>
+  </object>
+  <object id="187" name="Spice1" type="DeadSprite" x="4769" y="512" width="30" height="29">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="189" name="GainPlayerLife_1" type="GainPlayerLife" x="2510" y="282" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="190" name="GainPlayerLife_1" type="GainPlayerLife" x="2379" y="183" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="191" name="GainPlayerLife_1" type="GainPlayerLife" x="2786" y="534" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="192" name="GainPlayerLife_1" type="GainPlayerLife" x="3662" y="176" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="193" name="GainPlayerLife_1" type="GainPlayerLife" x="3701" y="440" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="194" name="GainPlayerLife_1" type="GainPlayerLife" x="4353" y="58" width="33" height="33">
+   <properties>
+    <property name="FilePath" value="src/assets/GainPlayerLife/GainPlayerLife.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="GAINPLAYERLIFE_1"/>
+   </properties>
+  </object>
+  <object id="195" name="Picture_1" type="AnimatedGraphic" x="892" y="435" width="48" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/Picture_1.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="30"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="PICTURE_1"/>
+   </properties>
+  </object>
+  <object id="196" name="Picture_1" type="AnimatedGraphic" x="1270" y="406" width="48" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/Picture_1.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="30"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="PICTURE_1"/>
+   </properties>
+  </object>
+  <object id="197" name="Picture_1" type="AnimatedGraphic" x="2444" y="336" width="48" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/Picture_1.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="30"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="PICTURE_1"/>
+   </properties>
+  </object>
+  <object id="198" name="HerculesTraining" type="AnimatedGraphic" x="452" y="17" width="80" height="89">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/HerculesTraining.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureID" value="HERCULESTRAINING"/>
+   </properties>
+  </object>
+  <object id="199" name="ManPooping" type="AnimatedGraphic" x="-1" y="415" width="65" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/ManPooping.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureID" value="MANPOOPING"/>
+   </properties>
+  </object>
+  <object id="200" name="WavingFlower" type="AnimatedGraphic" x="416" y="375" width="38" height="44">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingFlower.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="WAVINGFLOWER"/>
+   </properties>
+  </object>
+  <object id="201" name="WavingGrass" type="AnimatedGraphic" x="209" y="476" width="46" height="37">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="202" name="WavingGrass" type="AnimatedGraphic" x="580" y="86" width="29" height="12">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="203" name="WavingFlower" type="AnimatedGraphic" x="609" y="559" width="37" height="51">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingFlower.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="WAVINGFLOWER"/>
+   </properties>
+  </object>
+  <object id="204" name="WavingFlower" type="AnimatedGraphic" x="741" y="398" width="37" height="53">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingFlower.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="WAVINGFLOWER"/>
+   </properties>
+  </object>
+  <object id="205" name="WavingGrass" type="AnimatedGraphic" x="1375" y="354" width="39" height="34">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="206" name="WavingGrass" type="AnimatedGraphic" x="417" y="387" width="36" height="32">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="207" name="FallingLeaves" type="AnimatedGraphic" x="114" y="388" width="57" height="121">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="209" name="PinkRanger" type="FarAttackEnemy" x="2567" y="518" width="37" height="50">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="PINKRANGERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRanger.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRangerDying.png"/>
+    <property name="FrameHeight" type="int" value="85"/>
+    <property name="FrameWidth" type="int" value="70"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="PINKRANGER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="216" name="LastCheckPoint_1" type="CheckPointObject" x="5316" y="497" width="49" height="51">
+   <properties>
+    <property name="FilePath" value="src/assets/CheckPointObject/LastCheckPoint.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="50"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureID" value="LASTCHECKPOINT"/>
+   </properties>
+  </object>
+  <object id="217" name="Sasuke" type="ClosedAttackEnemy" x="5468" y="68" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="218" name="Agent" type="FarAttackEnemy" x="5528" y="52" width="31" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="AGENTDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/Agent.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/AgentDying.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="43"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="AGENT"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="219" name="PinkRanger" type="FarAttackEnemy" x="5630" y="45" width="37" height="50">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="PINKRANGERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRanger.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRangerDying.png"/>
+    <property name="FrameHeight" type="int" value="85"/>
+    <property name="FrameWidth" type="int" value="70"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="PINKRANGER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="220" name="SpiderMan" type="ClosedAttackEnemy" x="5579" y="31" width="34" height="52">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SPIDERMANDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderMan.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderManDying.png"/>
+    <property name="FrameHeight" type="int" value="109"/>
+    <property name="FrameWidth" type="int" value="75"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="3"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SPIDERMAN"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="221" name="Spice1" type="DeadSprite" x="5376" y="353" width="30" height="29">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="222" name="Spice1" type="DeadSprite" x="5407" y="417" width="30" height="29">
+   <properties>
+    <property name="FrameHeight" type="int" value="195"/>
+    <property name="FrameWidth" type="int" value="184"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="223" name="ManPooping" type="AnimatedGraphic" x="967" y="193" width="60" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/ManPooping.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureID" value="MANPOOPING"/>
+   </properties>
+  </object>
+  <object id="225" name="HerculesTraining" type="AnimatedGraphic" x="1600" y="458" width="80" height="89">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/HerculesTraining.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureID" value="HERCULESTRAINING"/>
+   </properties>
+  </object>
+  <object id="226" name="FallingLeaves" type="AnimatedGraphic" x="1329" y="267" width="57" height="121">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="227" name="FallingLeaves" type="AnimatedGraphic" x="1714" y="428" width="57" height="121">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="228" name="FallingLeaves" type="AnimatedGraphic" x="3646" y="386" width="100" height="183">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="229" name="FallingLeaves" type="AnimatedGraphic" x="4159" y="268" width="100" height="183">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="230" name="FallingLeaves" type="AnimatedGraphic" x="4179" y="37" width="51" height="90">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="231" name="FallingLeaves" type="AnimatedGraphic" x="4596" y="421" width="51" height="126">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/FallingLeaves.png"/>
+    <property name="FrameHeight" type="int" value="320"/>
+    <property name="FrameWidth" type="int" value="150"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="14"/>
+    <property name="textureID" value="FALLINGLEAVES"/>
+   </properties>
+  </object>
+  <object id="232" name="WavingFlower" type="AnimatedGraphic" x="1662" y="243" width="37" height="51">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingFlower.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="WAVINGFLOWER"/>
+   </properties>
+  </object>
+  <object id="233" name="WavingGrass" type="AnimatedGraphic" x="2144" y="164" width="39" height="34">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="234" name="WavingFlower" type="AnimatedGraphic" x="2714" y="339" width="37" height="51">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingFlower.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="9"/>
+    <property name="textureID" value="WAVINGFLOWER"/>
+   </properties>
+  </object>
+  <object id="235" name="WavingGrass" type="AnimatedGraphic" x="4041" y="421" width="39" height="34">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="236" name="ManPooping" type="AnimatedGraphic" x="1313" y="-32" width="60" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/ManPooping.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureID" value="MANPOOPING"/>
+   </properties>
+  </object>
+  <object id="237" name="ManPooping" type="AnimatedGraphic" x="2423" y="513" width="60" height="65">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/ManPooping.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="5"/>
+    <property name="textureID" value="MANPOOPING"/>
+   </properties>
+  </object>
+  <object id="238" name="HerculesTraining" type="AnimatedGraphic" x="3039" y="520" width="64" height="58">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/HerculesTraining.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="32"/>
+    <property name="animSpeed" type="int" value="200"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureID" value="HERCULESTRAINING"/>
+   </properties>
+  </object>
+  <object id="239" name="WavingGrass" type="AnimatedGraphic" x="936" y="97" width="36" height="32">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="240" name="WavingGrass" type="AnimatedGraphic" x="1597" y="66" width="36" height="32">
+   <properties>
+    <property name="FilePath" value="src/assets/AnimatedGraphic/WavingGrass.png"/>
+    <property name="FrameHeight" type="int" value="16"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="150"/>
+    <property name="numFrames" type="int" value="2"/>
+    <property name="textureID" value="WAVINGGRASS"/>
+   </properties>
+  </object>
+  <object id="241" name="Soldier" type="ClosedAttackEnemy" x="2953" y="532" width="37" height="38">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/Soldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/SoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="51"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="242" name="UselessSoldier" type="CantBeHurtEnemy" x="421" y="556" width="32" height="44">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="USELESSSOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="USELESSSOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="243" name="UselessSoldier" type="CantBeHurtEnemy" x="607" y="557" width="32" height="44">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="USELESSSOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="USELESSSOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="244" name="UselessSoldier" type="CantBeHurtEnemy" x="1679" y="38" width="32" height="44">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="USELESSSOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/CantBeHurtEnemy/UselessSoldier/UselessSoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="32"/>
+    <property name="FrameWidth" type="int" value="16"/>
+    <property name="animSpeed" type="int" value="100"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="USELESSSOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="245" name="Naruto" type="ClosedAttackEnemy" x="1110" y="358" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="NARUTODYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/Naruto.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/NarutoDying.png"/>
+    <property name="FrameHeight" type="int" value="71"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="NARUTO"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="246" name="Naruto" type="ClosedAttackEnemy" x="1756" y="479" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="NARUTODYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/Naruto.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/NarutoDying.png"/>
+    <property name="FrameHeight" type="int" value="71"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="NARUTO"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="247" name="Naruto" type="ClosedAttackEnemy" x="1906" y="32" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="NARUTODYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/Naruto.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/NarutoDying.png"/>
+    <property name="FrameHeight" type="int" value="71"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="NARUTO"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="248" name="Sasuke" type="ClosedAttackEnemy" x="2454" y="266" width="39" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="249" name="Sasuke" type="ClosedAttackEnemy" x="1523" y="197" width="46" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="250" name="Sasuke" type="ClosedAttackEnemy" x="4653" y="490" width="46" height="46">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="251" name="SpiderMan" type="ClosedAttackEnemy" x="2766" y="189" width="34" height="52">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SPIDERMANDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderMan.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/SpiderMan/SpiderManDying.png"/>
+    <property name="FrameHeight" type="int" value="109"/>
+    <property name="FrameWidth" type="int" value="75"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="3"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SPIDERMAN"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="252" name="Soldier" type="ClosedAttackEnemy" x="2961" y="276" width="37" height="38">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/Soldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/SoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="51"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="253" name="PinkRanger" type="FarAttackEnemy" x="3361" y="378" width="37" height="50">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="PINKRANGERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRanger.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/PinkRanger/PinkRangerDying.png"/>
+    <property name="FrameHeight" type="int" value="85"/>
+    <property name="FrameWidth" type="int" value="70"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="PINKRANGER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="254" name="Soldier" type="ClosedAttackEnemy" x="3515" y="530" width="37" height="38">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/Soldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/SoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="51"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="255" name="Soldier" type="ClosedAttackEnemy" x="3805" y="529" width="37" height="38">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/Soldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/SoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="51"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="256" name="Soldier" type="ClosedAttackEnemy" x="3961" y="274" width="37" height="38">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SOLDIERDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/Soldier.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Soldier/SoldierDying.png"/>
+    <property name="FrameHeight" type="int" value="51"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SOLDIER"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="257" name="Naruto" type="ClosedAttackEnemy" x="411" y="164" width="47" height="47">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="NARUTODYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/Naruto.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Naruto/NarutoDying.png"/>
+    <property name="FrameHeight" type="int" value="71"/>
+    <property name="FrameWidth" type="int" value="73"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="4"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="NARUTO"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="259" name="Sasuke" type="ClosedAttackEnemy" x="569" y="269" width="46" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="SASUKEDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/Sasuke.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/ClosedAttackEnemy/Sasuke/SasukeDying.png"/>
+    <property name="FrameHeight" type="int" value="69"/>
+    <property name="FrameWidth" type="int" value="78"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="SASUKE"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="260" name="Agent" type="FarAttackEnemy" x="2273" y="171" width="31" height="45">
+   <properties>
+    <property name="DyingFrameHeight" type="int" value="100"/>
+    <property name="DyingFrameWidth" type="int" value="100"/>
+    <property name="DyingNumFrames" type="int" value="12"/>
+    <property name="DyingTextureID" value="AGENTDYING"/>
+    <property name="FilePath" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/Agent.png"/>
+    <property name="FilePathDying" value="src/assets/Enemy/MoreTypeOfEnemies/FarAttackEnemy/Agent/AgentDying.png"/>
+    <property name="FrameHeight" type="int" value="50"/>
+    <property name="FrameWidth" type="int" value="43"/>
+    <property name="animSpeed" type="int" value="80"/>
+    <property name="numFrames" type="int" value="6"/>
+    <property name="textureHeight" type="int" value="34"/>
+    <property name="textureID" value="AGENT"/>
+    <property name="textureWidth" type="int" value="34"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="TileLayer2" width="190" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt2kEOQEAMBdCOuAR3wO0dC0dgKXZkjOC95O/apIvu2ggA4K+6FNHvMqSnJwIAAAAAAPie5ULPlH0KKKu+cHus3Ct5uWbb4TnOpbX3AADcYKzy1HCv4x+vf14AKG8F74UQ9A==
+  </data>
+ </layer>
+ <layer name="TileLayer3" width="190" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0rENADAIA0HWyf6z0YcVkEJo7qTvXTgCAAAAAAAAAIApWZ1mubIU3ur+HgAAAAAAfrpT5gXD
+  </data>
+ </layer>
+ <objectgroup name="BackGround5"/>
+ <objectgroup name="BackGround6"/>
+</map>

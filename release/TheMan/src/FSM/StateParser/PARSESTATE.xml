@@ -1,0 +1,123 @@
+<?xml version = "1.0"?>
+
+<!--type refering to objects is also used as objectCreator_ID in gameObjectFactory-->
+<STATES>
+
+		<MENUSTATE>     
+				<TEXTURES>
+					<texture filepath = "src/assets/Playbutton.png" ID ="PLAYBUTTON"/>     <!--PLAYBUTTON TEXTURE-->
+					<texture filepath = "src/assets/Exitbutton.png" ID ="EXITBUTTON"/>     <!--EXITBUTTON TEXTURE-->
+				</TEXTURES>
+		
+				<GAMEOBJECTS>      
+					<!--PLAYBUTTON GAMEOBJECT-->
+					<gameobject type = "MenuButton" pos_x = "100" pos_y = "100" 
+								width = "300" height = "70"
+								textureID = "PLAYBUTTON" m_callBackID = "1" 
+								FrameWidth = "400" FrameHeight = "100"/>       <!--no need numFrames or animate here cuz 
+																				   MenuButton has its animate index (see more in MenuButton class)-->      
+
+					<!--EXITBUTTON GAMEOBJECT-->
+					<gameobject type = "MenuButton" pos_x = "100" pos_y = "300" 
+								width = "300" height = "70"
+								textureID = "EXITBUTTON" m_callBackID = "2" 
+								FrameWidth = "400" FrameHeight = "100"/>  <!--textureID has to match the above TEXTURE element-->
+
+				</GAMEOBJECTS> 	   
+		</MENUSTATE>
+	
+		<PLAYSTATE>        <!--RIGHT NOW WE DO NOT PARSE PLAYSTATE FROM HERE -> WE DO IT IN LEVEL-->
+
+				<TEXTURES>
+					<texture filepath = "src/assets/Player.png" ID = "PLAYER"/>
+					<texture filepath = "src/assets/Item_16.png" ID = "ENEMY"/>
+					<texture filepath = "src/assets/Animate_cat.png" ID = "ANIMATE_CAT"/>          <!--just testing animated graphic-->
+
+					<texture filepath = "src/assets/PlayerDying.png" ID = "PLAYERDYING"/>          <!---->
+				</TEXTURES>
+		
+				<GAMEOBJECTS>
+					
+					<gameobject type = "Player" pos_x = "50" pos_y = "50"        
+								width = "50" height = "50"
+								textureID = "PLAYER" m_callBackID = "0"
+								FrameWidth = "99" FrameHeight = "43" 
+								numFrames = "5"
+								animSpeed = "100"/>     <!--Player class type-->
+														<!--the order of this GAMEOBJECTS list is really important-->
+														<!--cuz when the Player is scanned first -> m_gameObjects[0] will be the Player-->
+					
+					<gameobject type = "Enemy" pos_x = "600" pos_y = "700"           
+								width = "50" height = "50"
+								textureID = "ENEMY" m_callBackID = "0"
+								FrameWidth = "256" FrameHeight = "256"/>    <!--due to image info change, we'll deal with this later--> 
+
+					<gameobject type = "AnimatedGraphic" pos_x = "500" pos_y = "600"
+								width = "100" height = "70"
+								textureID = "ANIMATE_CAT" m_callBackID = "0"
+								FrameWidth = "128" FrameHeight = "82" 
+								numFrames = "6"
+								animSpeed = "100"/>   
+
+								<!--AnimatedGraphic class type-->
+								<!--numFrames is for animateObjects TYPE only-->
+								<!--animSpeed is for animateObjects TYPE only-->
+
+				</GAMEOBJECTS>
+
+		</PLAYSTATE>
+	
+		<PAUSEDSTATE>
+				<TEXTURES>
+					<texture filepath = "src/assets/Mainmenu.png" ID = "RESUMETOMAINMENU"/>
+					<texture filepath = "src/assets/Resume.png"   ID = "RESUMETOGAME"/>
+				</TEXTURES>
+		
+				<GAMEOBJECTS>
+
+					<gameobject type = "MenuButton" pos_x = "500" pos_y = "100"
+								width = "300" height = "70"
+								textureID = "RESUMETOMAINMENU" m_callBackID = "1"
+								FrameWidth = "400" FrameHeight = "100"/>
+
+					<gameobject type = "MenuButton" pos_x = "500" pos_y = "300"
+								width = "300" height = "70"
+								textureID = "RESUMETOGAME" m_callBackID = "2"
+								FrameWidth = "400" FrameHeight = "100"/>
+
+				</GAMEOBJECTS>
+		</PAUSEDSTATE>
+	
+		<GAMEOVERSTATE>
+				<TEXTURES>
+					<texture filepath = "src/assets/Restart.png"  ID = "RESTART"/>
+					<texture filepath = "src/assets/Gameover.png" ID = "GAMEOVER"/>
+					<texture filepath = "src/assets/Mainmenu.png" ID = "MAINMENU"/>
+				</TEXTURES>
+		
+				<GAMEOBJECTS>
+
+					<gameobject type = "MenuButton" pos_x = "400" pos_y = "400"
+								width = "300" height = "70"
+								textureID = "MAINMENU" m_callBackID = "1"
+								FrameWidth = "400" FrameHeight = "100"/>
+
+					<gameobject type = "MenuButton" pos_x = "400" pos_y = "500"
+								width = "300" height = "70"
+								textureID = "RESTART" m_callBackID = "2"
+								FrameWidth = "400" FrameHeight = "100"/>
+
+					<gameobject type = "AnimatedGraphic" pos_x = "400" pos_y = "300"
+								width = "300" height = "70"
+								textureID = "GAMEOVER" m_callBackID = "0"
+								FrameWidth = "394" FrameHeight = "150" 
+								numFrames = "2" 
+								animSpeed = "1000"/>    
+
+								<!-- remember animSpeed bigger -> the slower -> cuz animSpeed is the amount of time
+							         we want between two animation frames-->
+
+				</GAMEOBJECTS>
+		</GAMEOVERSTATE>
+
+</STATES>

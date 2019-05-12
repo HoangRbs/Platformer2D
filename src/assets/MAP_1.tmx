@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="60" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="whatever" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="PlayStateTiledMap.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="257" name="whatever2" tilewidth="32" tileheight="32" tilecount="35" columns="7">
+  <image source="backgrounds.png" width="231" height="189"/>
+ </tileset>
+ <layer name="tile layer 1" width="60" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF9ACMQMwBZbMMpEOoBDgIyAsCsRAUC9PeOXDgRaYcJeaCgCEQK0GxMQG1c4F4HhDPp8A9Qx3gSz+45AilucEMYsiQQxcfSv7PIUMOXZyJgB345AnppTaoIUMOnx56glQgTgPi9IF2CJ1AKRCXAXE5He1kJUINofyNSx6b2ehqnYmwn5oAVv/jqvvxyWOT48Aijw/ja3MQqn+xyePSA2sXKDJA6n5lLHK45PHJIesFtS2MCGBCbQ5qA5ibcNmLT56QXloActqFlLQXhyoAALtrGDk=
+  </data>
+ </layer>
+</map>
